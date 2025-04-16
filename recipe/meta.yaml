@@ -1,4 +1,4 @@
-{% set version = '1.2-4' %}
+{% set version = "1.2-5" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/DoE.base_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DoE.base/DoE.base_{{ version }}.tar.gz
-  sha256: c072c01eb59c997100306a1df6e2a2bfd4ad3d993e2d4156f59016123e8de053
+  sha256: 59cc4e2afe7bef792d454655258e8f4eb073cf3fdcb9639237f83e2fe1b7f4b9
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -49,10 +49,7 @@ test:
 about:
   home: https://prof.bht-berlin.de/groemping/DoE/, https://prof.bht-berlin.de/groemping/
   license: GPL-2.0-or-later
-  summary: Creates full factorial experimental designs and designs based on orthogonal arrays
-    for (industrial) experiments. Provides diverse quality criteria. Provides utility
-    functions for the class design, which is also used by other packages for designed
-    experiments.
+  summary: Creates full factorial experimental designs and designs based on orthogonal arrays for (industrial) experiments. Provides diverse quality criteria. Provides utility functions for the class design, which is also used by other packages for designed experiments.
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
